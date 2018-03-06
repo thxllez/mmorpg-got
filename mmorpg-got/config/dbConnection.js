@@ -2,14 +2,15 @@
 var mongo = require('mongodb');
 
 var connMongoDB = function(){
-	var db = new mongo.Db( // instanciando a classe de conexão, que espera 3 parâmetros:
-		'got', // string do nome do banco de dados
-		new mongo.Server( // objeto de conexão com o servidor 
-			'localhost', // string contendo o endereço do banco de dadoss 
-			27017, // porta de conexão 
-			{} //opções de configurações do servidor - não vamos utilizar
-		), 
-		{} //objeto de configurações adicionais - não vamos utilizar também
+	console.log('Entrou na função de conexão');
+	var db = new mongo.Db(
+		'got',
+		new mongo.Server(
+			'localhost', //string contendo o endereço do servidor
+			27017, //porta de conexão
+			{}
+		),
+		{}
 	);
 
 	return db;
