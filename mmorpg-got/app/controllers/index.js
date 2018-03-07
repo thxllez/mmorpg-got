@@ -15,4 +15,6 @@ module.exports.autenticar = function(application, req, res){
 		return;
 	}
 
+	res.send('autenticou');
+
 }
